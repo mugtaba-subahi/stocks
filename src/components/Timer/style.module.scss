@@ -1,0 +1,11 @@
+.component {
+  @apply mb-8 grid justify-items-center;
+}
+
+.item {
+  @apply opacity-50 text-sm;
+}
+
+.time {
+  @apply opacity-100 text-2xl;
+}

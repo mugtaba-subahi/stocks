@@ -1,0 +1,24 @@
+.component {
+  @apply grid grid-cols-3 justify-items-center text-lg rounded px-5 opacity-50 duration-300;
+}
+
+.item {
+  @apply py-3 justify-items-center;
+}
+
+.english{
+  @apply justify-self-start;
+}
+
+.arabic{
+  @apply justify-self-end leading-6 text-xl;
+}
+
+.isNext,
+.passed {
+  @apply opacity-100;
+}
+
+.isNext {
+  background-color: #0d6cda;
+}

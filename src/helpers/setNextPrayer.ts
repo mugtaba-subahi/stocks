@@ -1,12 +1,12 @@
 import { IPrayer } from "../interfaces";
-import { state as State } from "../store";
+import { nextPrayerIndex, setNextPrayerIndex, prayers } from "../store";
 import setTimerHelper from "./setTimer";
 
 export default (): void => {
-  State().nextPrayerIndex = State().prayers.findIndex((item: IPrayer) => !item.passed);
+  setNextPrayerIndex(prayers().findIndex((item: IPrayer) => !item.passed));
 
-  if (State().nextPrayerIndex === -1) return;
+  if (nextPrayerIndex() === -1) return;
 
-  State().prayers[State().nextPrayerIndex].isNext = true;
+  prayers()[nextPrayerIndex()].isNext = true;
   setTimerHelper();
 };

@@ -15,6 +15,7 @@
     "strict": true,
     // manually imported properties
     "jsx": "preserve",
-    "jsxImportSource": "solid-js"
+    "jsxImportSource": "solid-js",
+    "allowSyntheticDefaultImports": true
   }
 }
