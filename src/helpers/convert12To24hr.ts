@@ -2,7 +2,7 @@ import convertTime from "convert-time";
 import validateTimeHelper from "./validateTime";
 
 export default (name: string, time: string): string => {
-  const isValidTime: boolean = validateTimeHelper(time);
+  const isValidTime = validateTimeHelper(time);
   if (!isValidTime) throw { error: true, message: "Invalid time" };
 
   if (name === "Dhuhr") {
@@ -12,7 +12,7 @@ export default (name: string, time: string): string => {
     if (+dhuhr_hour < 5) return convertTime(`${time} PM`, "hh:MM");
   }
 
-  const pmPrayers: string[] = ["Asr", "Magrib", "Isha"];
+  const pmPrayers = ["Asr", "Magrib", "Isha"];
   if (pmPrayers.indexOf(name) !== -1) return convertTime(`${time} PM`, "hh:MM");
 
   return time;

@@ -1,4 +1,4 @@
-import styles from "./style.module.scss";
+import c from "./style.module.css";
 
 interface Props {
   english: string;
@@ -8,15 +8,12 @@ interface Props {
   isNext: boolean;
 }
 
-function Prayer({ english, time, arabic, passed, isNext }: Props) {
-  return (
-    <p>english</p>
-    // <div class={styles.component} classList={{ passed, isNext }}>
-    //   <p class={`${styles.item} ${styles.enlish}`}> {english} </p>
-    //   <p class={`${styles.item} ${styles.time}`}> {time} </p>
-    //   <p class={`${styles.arabic} ${styles.arabic}`}> {arabic} </p>
-    // </div>
-  );
-}
+const Prayer = ({ english, time, arabic, passed, isNext }: Props) => (
+  <div class={c.component} classList={{ [c.passed]: passed, [c.isNext]: isNext }}>
+    <p class={`${c.item} ${c.english}`}> {english} </p>
+    <p class={`${c.item} ${c.time}`}> {time} </p>
+    <p class={`${c.item} ${c.arabic}`}> {arabic} </p>
+  </div>
+);
 
 export default Prayer;

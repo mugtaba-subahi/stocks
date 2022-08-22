@@ -1,7 +1,7 @@
 import validateTimeHelper from "./validateTime";
 
 export default (time: string): number => {
-  const isValidTime: boolean = validateTimeHelper(time);
+  const isValidTime = validateTimeHelper(time);
   if (!isValidTime) throw { error: true, message: "Invalid time" };
 
   const [hour, minute] = time.split(":");

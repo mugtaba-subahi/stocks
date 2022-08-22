@@ -6,11 +6,12 @@
   @apply py-3 justify-items-center;
 }
 
-.english{
+.english {
   @apply justify-self-start;
 }
 
-.arabic{
+.arabic {
+  font-family: Uthamnic;
   @apply justify-self-end leading-6 text-xl;
 }
 

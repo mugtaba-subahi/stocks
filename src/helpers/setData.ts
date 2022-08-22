@@ -10,6 +10,6 @@ export default (data: IApi): void => {
     time: data[name.toLocaleLowerCase()]
   });
 
-  const prayers: IPrayer[] = english.map(preparePrayer);
+  const prayers = english.map(preparePrayer);
   setPrayers(prayers);
 };

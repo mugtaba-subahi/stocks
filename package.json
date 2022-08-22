@@ -15,6 +15,7 @@
     "solid-js": "^1.4.8"
   },
   "dependencies": {
+    "autoprefixer": "^10.4.8",
     "convert-time": "^0.3.0",
     "dayjs": "^1.11.5",
     "tiny-timer": "^1.6.0"

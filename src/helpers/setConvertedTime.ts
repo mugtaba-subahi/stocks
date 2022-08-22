@@ -4,9 +4,9 @@ import convert24hrToMillisecondHelper from "./convert24hrToMillisecond";
 
 export default (): void => {
   for (let [index, prayer] of prayers().entries()) {
-    const military: string = convert12To24hrHelper(prayer.english, prayer.time);
-    const time: number = convert24hrToMillisecondHelper(military);
-    const now: number = new Date().getTime();
+    const military = convert12To24hrHelper(prayer.english, prayer.time);
+    const time = convert24hrToMillisecondHelper(military);
+    const now = new Date().getTime();
 
     setPrayers((prayers) => {
       prayers[index].time = military;
