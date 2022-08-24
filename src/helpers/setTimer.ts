@@ -1,7 +1,6 @@
 import TinyTimer from "tiny-timer";
 import dayjs from "dayjs";
 import { prayers, nextPrayerIndex, setRemainder, setPrayers } from "../store";
-import { IPrayer } from "../interfaces";
 import setNextPrayerHelper from "./setNextPrayer";
 import convert24hrToMillisecondHelper from "./convert24hrToMillisecond";
 

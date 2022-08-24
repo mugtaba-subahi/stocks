@@ -8,6 +8,9 @@ import getDataHelper from "../helpers/getData";
 import setDataHelper from "../helpers/setData";
 import setConvertedTimeHelper from "../helpers/setConvertedTime";
 import setNextPrayerHelper from "../helpers/setNextPrayer";
+import { polyfill } from "@astrojs/webapi";
+
+polyfill(globalThis);
 
 let isLoading = true;
 
@@ -21,7 +24,7 @@ isLoading = false;
 ---
 
 <div>
-	<Timer />
+	<Timer client:load />
 	<Heading />
 	{!isLoading && prayers().map((prayer) => <Prayer {...prayer} />)}
 </div>
